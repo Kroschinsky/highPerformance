@@ -9,12 +9,12 @@
 #include <climits>
 
 
+#include "Move.h"
+
 
 int main(int argc, char* argv[])
 {
-
-
-
+    MoveContainer::show();
 
     return 0;
 }
