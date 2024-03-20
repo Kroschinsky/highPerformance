@@ -17,7 +17,8 @@ public:
 
 	}
 
-	static void show();
+	static void showMove();
+	static void showSwap();
 	
 	void print();
 

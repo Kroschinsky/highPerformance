@@ -1,6 +1,6 @@
 #include "Move.h"
 
-void MoveContainer::show()
+void MoveContainer::showMove()
 {
     auto vec = std::vector<std::string>();
     vec.push_back("salt");
@@ -21,6 +21,25 @@ void MoveContainer::show()
     a.print();
     b.print();
     c.print();
+}
+
+void MoveContainer::showSwap()
+{
+    auto vec = std::vector<std::string>();
+    vec.push_back("salt");
+
+    auto a = MoveContainer("a", vec);
+
+    vec.push_back("pepper");
+    auto b = MoveContainer("b", vec);
+
+    a.print();
+    b.print();
+
+    std::swap(a, b);
+
+    a.print();
+    b.print();
 }
 
 void MoveContainer::print()

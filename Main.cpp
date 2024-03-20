@@ -10,11 +10,19 @@
 
 
 #include "Move.h"
+#include "BufferMove.h"
 
 
 int main(int argc, char* argv[])
 {
-    MoveContainer::show();
+    //MoveContainer::showMove();
+    //MoveContainer::showSwap();
+
+    // a become "" and resource go to b
+    std::string a = "stringA";
+    auto b = std::move(a);
+
+    BufferMove::showCopy();
 
     return 0;
 }
