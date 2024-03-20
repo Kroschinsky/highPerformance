@@ -11,6 +11,7 @@
 
 #include "Move.h"
 #include "BufferMove.h"
+#include "Button.h"
 
 
 int main(int argc, char* argv[])
@@ -19,10 +20,12 @@ int main(int argc, char* argv[])
     //MoveContainer::showSwap();
 
     // a become "" and resource go to b
-    std::string a = "stringA";
-    auto b = std::move(a);
+    //std::string a = "stringA";
+    //auto b = std::move(a);
 
-    BufferMove::showCopy();
+    //BufferMove::showCopy();
+
+    Button::showCase();
 
     return 0;
 }
