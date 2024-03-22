@@ -12,6 +12,7 @@
 #include "Move.h"
 #include "BufferMove.h"
 #include "Button.h"
+#include "LambdaObject.h"
 
 
 int main(int argc, char* argv[])
@@ -25,7 +26,22 @@ int main(int argc, char* argv[])
 
     //BufferMove::showCopy();
 
-    Button::showCase();
+    //Button::showCase();
+
+    {
+        int x = 3;
+        auto is_above = [x](int y) { return y > x; };
+        auto test = is_above(5);
+        std::cout << test << std::endl;
+    }
+
+    {
+        int x = 3;
+        auto is_above = LambdaObjectValue(x);
+        auto test = is_above(5);
+        std::cout << test << std::endl;
+    }
+
 
     return 0;
 }
